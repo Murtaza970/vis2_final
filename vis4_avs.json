@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 400,
+  "title": {"text":"Salary based on Experience", "fontSize": 20, 
+"fontWeight":"bold"},
+  "background": "transparent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Taz0097/hello/main/data/Avg_Exp.csv"
+  },
+  "params": [
+    {
+      "name": "CountryFilter",
+      "bind": {
+        "input": "select",
+        "options": [null, "Australia", "Canada", "China", "UK", "USA"],
+        "labels": ["Show All", "Australia", "Canada", "China", "UK", "USA"],
+        "name": "Country Filter:"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "fold": ["Australia", "Canada", "China", "UK", "USA"],
+      "as": ["Country", "Average Salary"]
+    },
+    {"filter": "CountryFilter == null|| datum.Country == CountryFilter"}
+  ],
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "Years_of_Experience",
+      "type": "quantitative",
+      "title": "Years of Experience"
+    },
+    "y": {
+      "field": "Average Salary",
+      "scale": {"domainMax": 250000},
+      "type": "quantitative",
+      "title": "Average Salary(USD)"
+    },
+    "tooltip": [
+      {"field": "Country", "title": "Country"},
+      {"field": "Years_of_Experience", "title": "Years of Experience"},
+      {"field": "Average Salary", "title": "Average Salary", "format": ".2f"}],
+
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "title": "Country",
+      "scale": {
+        "domain": ["Australia", "Canada", "China", "UK", "USA"],
+        "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#9467bd", "#17becf"]
+      }
+      
+    }
+  },
+  "config": {}
+}

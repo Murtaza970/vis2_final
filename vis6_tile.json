@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title":{"text": " Salary by Years of Experience and Race",
+  "fontSize": 20, "fontWeight":"bold"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/Taz0097/exmple/main/salary1.csv"
+  },
+  "transform": [
+    {"calculate": "'No data' + 'datum.Average Salary' == null", "as": "note"}
+  ],
+  "width": 800, 
+  "height": 300,
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Years_of_Experience",
+      "type": "ordinal",
+      "title": "Years of Experience"
+    },
+    "y": {"field": "Country", "type": "nominal", "title": "Country"},
+    "color": {
+      "condition": {"test": "datum.Salary === null", "value": "white"},
+      "field": "Salary",
+      "type": "quantitative",
+      "title": "Average Salary(USD)",
+      "scale": {"scheme": "blues"}
+    },
+    "tooltip": [
+      {"field": "Country", "title": "Country"},
+      {"field": "Years_of_Experience", "title": "Years of Experience"},
+      {"field": "Salary", "title": "Average Salary", "format": ".2f"},
+      {"field": "Race_Category", "type": "nominal", "title": "Race"}
+    ]
+  },
+  "config": {}
+}

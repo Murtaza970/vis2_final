@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/Taz0097/hello/main/data/salary1.csv"
+  },
+  "params": [
+    {
+      "name": "Race_Group",
+      "bind": {
+        "input": "select",
+        "options": [null, "White", "Black", "Asian", "Other"],
+        "labels": ["Show All", "White", "Black", "Asian", "Other"],
+        "name": "Race:"
+      }
+    },
+    {
+      "name": "Country",
+      "bind": {
+        "input": "select",
+        "options": [null, "Australia", "Canada", "China", "UK", "USA"],
+        "labels": ["Show All", "Australia", "Canada", "China", "UK", "USA"],
+        "name": "Country:"
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "Race_Group == null || datum.Race_Category == Race_Group"},
+    {"filter": "Country == null || datum.Country == Country"}
+  ],
+  "mark": {"type": "line", "point": "transparent"},
+  "encoding": {
+    "x": {"field": "Years_of_Experience", "type": "quantitative"},
+    "y": {
+      "field": "Salary",
+      "type": "quantitative",
+      "title": "Salary in (USD) ",
+      "scale": {"domainMax": 260000}
+    },
+    "color": {
+      "field": "Race_Category",
+      "type": "nominal",
+      "scale": {
+        "domain": ["White", "Black", "Asian", "Other"],
+        "range": ["brown", "grey", "darkblue", "darkgreen"]
+      }
+    },
+    "opacity": {
+      "condition": {"param": "Race_Group", "value": 0.5},
+      "value": 0.5
+    },
+    "tooltip": [
+      {"field": "Race_Category", "type": "nominal"},
+      {"field": "Salary", "type": "quantitative"},
+      {"field": "Country", "type": "nominal"},
+      {"field": "Job_Title", "type": "nominal", "title": "Job"}
+    ]
+  },
+  "config": {}
+}

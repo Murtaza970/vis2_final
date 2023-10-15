@@ -1,0 +1,186 @@
+#map {
+	position: absolute;
+	float: left;
+	top:250px;
+	bottom: 100px; 
+	left: 150px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#cirlejson{
+	position: absolute;
+	float: left;
+	top:3500px;
+	bottom: 150px; 
+	left:150;
+	right: 280px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+hr.sep{
+	border: 1px solid;
+}
+
+#vis3_educ {
+	position: absolute;
+	top:755px;
+	bottom: 100px; 
+	left: 725px;
+	right: 50px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#vis4_avs {
+	position: absolute;
+	top:1350px;
+	bottom: 100px; 
+	left:150px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#vis5_gender {
+
+	position: absolute;
+	top: 2000px;
+	bottom: 100px; 
+	left:725px;
+	right: 100px;
+
+}
+
+#vis6_tile {
+	position: absolute;
+	top: 2800px;
+	bottom: 100px; 
+	left:150px;
+	right:120px;
+	
+}
+#Title {
+	font-weight: bold;
+	font-family: Helvetica;
+	font-size: 30px;
+	position: absolute;
+	width: 1000px;
+	top: 50px;
+	bottom: 50px;
+	left: 365px;
+	right: 280px;
+}
+
+#Map_detail {
+	font-family: Helvetica;
+	text-align: left;
+	font-size: 16px;
+	position: absolute;
+	width: 450px;
+	height: 70px;
+	top: 350px;
+	bottom: 50px;
+	left: 820px;
+	right: 10px;
+}
+
+
+
+#educ_detail {
+	font-family: Helvetica;
+	font-size: 16px;
+	position: absolute;
+	width: 500px;
+	height: 240px;
+	top: 880px;
+	bottom: 100px; 
+	left: 150px;
+	right: 100px;
+
+}
+
+
+.horizontal {
+    border: none; /* Remove the default border */
+    height: 2px; /* Set the height of the line */
+    background-color: blue; /* Set the line color */
+    margin: 20px 
+}
+#avsal_detail {
+
+	font-family: Helvetica;
+	font-size: 16px;
+	position: absolute;
+	width: 500px;
+	top: 1400px;
+	bottom: 100px; 
+	left: 730px;
+	right: 50px;
+}
+
+
+#gender_detail{
+	font-family: Helvetica;
+	font-size: 16px;
+	position: absolute;
+	width: 500px;
+	height: 400px;
+	top: 2070px;
+	bottom: 100px; 
+	left: 150px;
+	right: 700px;
+
+}
+#tile_detail {
+	font-family: Helvetica;
+	font-size: 16px;
+	position: absolute;
+	width: 500px;
+	height: 400px;
+	top: 2580px;
+	bottom: 100px; 
+	left: 150px;
+	right: 700px;
+}
+#vis2 {font-family: Helvetica;
+	font-size: 16px;
+	position: absolute;
+	width: 500px;
+	height: 400px;
+	top: 3320px;
+	bottom: 100px; 
+	left: 150px;
+	right: 700px;
+
+}
+#MainBox {
+	height: 4000px;
+	width: fit-content;
+	margin-left: 100px;
+	border: 1px solid black;
+	background-color:rgba(247, 241, 241, 0.982);
+}
+
+#Body {
+	background-image: url("");
+}
+
+#Controller1 {
+	position: absolute;
+	object-fit: contain;
+	width: 100px;
+	height: 100px;
+	top: 25px;
+	left: 1025px;
+}
+
+#Controller2 {
+	position: absolute;
+	object-fit: contain;
+	width: 100px;
+	height: 100px;
+	top: 25px;
+	left: 150px;
+}

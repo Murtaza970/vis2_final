@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" href="css/style.css" type= "text/css" media = "all">
+
+
+</head>
+<body id="Body">
+  <div id="MainBox">
+  
+<div id="Title">Salary based on Race and Region</div>
+
+<div id="map"></div>
+
+
+<div id="Map_detail">
+   <strong>Global Salary Disparities by Race </strong> <br>
+
+    This visualization illustrates salary disparities based on race in select countries. While not comprehensive, it offers valuable insights into these inequalities, primarily within first-world nations. The data highlights global patterns and prompts further exploration.
+</div>
+
+
+
+<div id="vis3_educ"></div>
+<div id="educ_detail">
+    <strong>Education-Level Salary Disparities</strong> <br>
+
+    This bar graph shows the average salaries based on participants' education levels.
+     The impact of race on salaries is evident; however, it's worth noting that certain race group data is missing for countries like Australia and others.
+</div>
+<hr class="sep">
+<div id="vis4_avs"></div>
+<div id="avsal_detail">
+    <strong>Exploring Global Salary by Experience</strong><br>
+
+    This interactive scatter plot shows the relationship between average salaries,
+     measured in USD, and years of experience across various countries. As you explore the data, you'll notice that salary averages can vary significantly based on one's professional tenure.
+      While the tool provides a dynamic filter for a more personalized view, it's important to note that some data may be missing for certain countries, 
+      highlighting the disparities in our global understanding of salary patterns
+</div>
+<div id="gender_detail">
+    <strong>Gender Wage Gap Across Nations</strong><br>
+
+This line chart unveils the stark reality of wage disparities across genders. 
+Delving into the data reveals that, on average,
+ females earn considerably less than their male and other-gender counterparts across all countries in our dataset.
+  The graph serves as a powerful visual reminder of the global wage gap, urging us to address this pressing issue
+
+</div>
+<div id="vis5_gender"></div>
+
+<dive id = "vis6_tile"></dive>
+<div id = "tile_detail">
+<strong> Salary and Experience</strong> <br>
+    This heatmap visualizes the correlation between years of
+     professional experience and average salary in different countries.
+      The color intensity reflects the salary levels, with darker shades
+       representing higher incomes. Notably, areas with a white background
+        signify missing data for specific regions. 
+        The accompanying legend provides a reference for the salary ranges
+        , aiding in the interpretation of the heatmap's
+         color scale and facilitating a more comprehensive understanding of the data.
+</div>
+<div id = vis2> 
+    <strong>Salary Race and Country Scatter</strong><br>. The data reveals significant 
+     disparities, with Asians generally earning the highest salaries, 
+     while White individuals tend to earn the least. Notably,
+      this disparity may be attributed to the fact that the dataset 
+      predominantly includes information from predominantly White-majority
+       countries, such as the United States and the United Kingdom. 
+       This skewed representation in the data potentially underscores 
+       disparities in income distribution due to factors like job positions and opportunities
+</div>
+
+<div id="cirlejson"></div>
+
+
+
+
+  </div>
+
+<script type="text/javascript">
+
+  var spec2 = "./map.json";
+  vegaEmbed('#map', spec2).then(function(result) {
+     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec2 = "./cirlejson.json";
+  vegaEmbed('#cirlejson', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var spec2 = "./vis3_educ.json";
+  vegaEmbed('#vis3_educ', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec2 = "./vis4_avs.json";
+  vegaEmbed('#vis4_avs', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  var spec2 = "./vis5_gender.json";
+  vegaEmbed('#vis5_gender', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec2 = "./vis6_tile.json";
+  vegaEmbed('#vis6_tile', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+</body>
+</html>

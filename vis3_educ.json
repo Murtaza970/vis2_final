@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "height": 300,
+  "title": {
+    "text": "Education vs Salary",
+    "fontSize": 20,
+    "fontWeight": "bold"
+  },
+  "background": "transparent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Taz0097/hello/main/data/Educ_level.csv"
+  },
+  "params": [
+    {
+      "name": "Country_Selection",
+      "bind": {
+        "input": "select",
+        "options": [null, "Australia", "Canada", "China", "UK", "USA"],
+        "labels": ["Show All", "Australia", "Canada", "China", "UK", "USA"],
+        "name": "Country:"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "fold": [
+        "Undergrad",
+        "Double_Undergrad",
+        "High_School",
+        "Double_Master",
+        "Master",
+        "PHD"
+      ],
+      "as": ["Educ_level", "Average Salary"]
+    },
+    {"filter": "Country_Selection == null|| datum.Country== Country_Selection"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Educ_level", "type": "nominal", "title": "Education Level"},
+    "y": {
+      "field": "Average Salary",
+      "type": "quantitative",
+      "title": "Average Salary(USD)"
+    },
+    "color": {
+      "field": "Educ_level",
+      "type": "nominal",
+      "title": "Education Level",
+      "scale": {
+        "range": ["#3498db", "#9b59b6", "#e67e22", "#1abc9c", "#f1c40f"]
+      }
+    },
+    "tooltip": [
+      {"field": "Educ_level", "type": "nominal"},
+      {"field": "Country", "type": "nominal"},
+      {"field": "Average Salary", "type": "quantitative"}
+    ]
+  },
+  "config": {"axisX": {"labelAngle": 45, "labelFontSize": 11}}
+}

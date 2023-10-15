@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width":400,
+  "height":400,
+  "title": {"text":"Average Salary based on Gender",
+  "fontSize":20, "fontWeight":"bold"},
+   "background": "transparent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Taz0097/hello/main/data/Gender.csv"
+  },
+  "params": [
+    {
+      "name": "Gender_Selection",
+      "bind": {
+        "input": "radio",
+        "options": [null, "Female", "Male", "Other"],
+        "labels": ["Show All", "Female", "Male", "Other"],
+        "name": "Gender:"
+      }
+    }
+  ],
+  "transform": [
+    {"fold": ["Female", "Male", "Other"], "as": ["Gender", "value"]},
+    {"filter": "Gender_Selection == null|| datum.Gender== Gender_Selection"}
+  ],
+  "mark": {"type":"line","point":true},
+  "encoding": {
+    "x": {"field": "Country", "type": "nominal"},
+    "y": {"field": "value", "type": "quantitative", "title": "Average Salary(USD)"},
+    "color": {"field": "Gender", "type": "nominal",
+  "scale":{
+    "range": ["#3498db", "#9b59b6", "#e67e22"]
+  }},"tooltip": [
+    {"field": "Gender", "type": "nominal", "title": "Gender"},
+    {"field": "value","type": "quantitative","title": "Avg Salary"},
+    {"field":"Country", "type": "nominal","title": "Country"}
+  ]
+  },
+  "config": {}
+}
