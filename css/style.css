@@ -144,6 +144,16 @@ hr.sep{
 	left: 150px;
 	right: 700px;
 }
+#foot{ font: optional;
+	font-size: smaller;
+	position:absolute;
+	top: 4400px;
+	height: 0px;
+	width: auto;
+	bottom: 10px;
+	left :150px;
+
+}
 #vis2 {font-family: Helvetica;
 	font-size: 16px;
 	position: absolute;
@@ -156,7 +166,7 @@ hr.sep{
 
 }
 #MainBox {
-	height: 4000px;
+	height: 4500px;
 	width: fit-content;
 	margin-left: 100px;
 	border: 1px solid black;
