@@ -26,7 +26,7 @@
     },
     {"filter": "CountryFilter == null|| datum.Country == CountryFilter"}
   ],
-  "mark": "point",
+  "mark": "circle",
   "encoding": {
     "x": {
       "field": "Years_of_Experience",
