@@ -8,14 +8,82 @@
 	/*height: 1000px;
 	width: 800px;*/
 }
+#vis1 {
+	position: absolute;
+	float: left;
+	top: 300px;
+	bottom: 50px;
+	left: 180px;
+	font-family: helvetica;
+	color: black;
+	font-size: 18px;
+	font-style:normal;
+}
+#num2 { position: absolute;
+	float: left;
+	top: 780px;
+	bottom: 100px;
+	left: 890px;
+	right: 100px;
+	font-family: helvetica;
+	color: black;
+	font-size: 18px;
+	font-style: normal;
+
+}
+#num3 {position: absolute;
+	float: left;
+	top: 1330px;
+	bottom: 100px;
+	left: 220px;
+	right: 100px;
+	font-family: helvetica;
+	color: black;
+	font-size: 18px;
+	font-style: normal;}
+
+#num4 {position: absolute;
+		float: left;
+		top: 1990px;
+		bottom: 100px;
+		left: 870px;
+		right: 100px;
+		font-family: helvetica;
+		color: black;
+		font-size: 18px;
+		font-style: normal;}
+
+#num5 {position: absolute;
+	float: left;
+	top: 2800px;
+	bottom: 100px;
+	left: 390px;
+	right: 100px;
+	font-family: helvetica;
+	color: black;
+	font-size: 18px;
+	font-style: normal;}
+
+#num6 {position: absolute;
+		float: left;
+		top: 3560px;
+		bottom: 100px;
+		left: 220px;
+		right: 100px;
+		font-family: helvetica;
+		color: black;
+		font-size: 18px;
+		font-style: normal;}
+
+
 
 #cirlejson{
 	position: absolute;
 	float: left;
-	top:3500px;
+	top:3550px;
 	bottom: 150px; 
 	left:150;
-	right: 280px;
+	right: 220px;
 	/*height: 1000px;
 	width: 800px;*/
 }
@@ -25,9 +93,9 @@ hr.sep{
 
 #vis3_educ {
 	position: absolute;
-	top:755px;
+	top:800px;
 	bottom: 100px; 
-	left: 725px;
+	left: 820px;
 	right: 50px;
 	/*height: 1000px;
 	width: 800px;*/
@@ -48,14 +116,14 @@ hr.sep{
 	position: absolute;
 	top: 2000px;
 	bottom: 100px; 
-	left:725px;
+	left:820px;
 	right: 100px;
 
 }
 
 #vis6_tile {
 	position: absolute;
-	top: 2800px;
+	top: 2840px;
 	bottom: 100px; 
 	left:150px;
 	right:120px;
@@ -114,10 +182,10 @@ hr.sep{
 	font-size: 16px;
 	position: absolute;
 	width: 500px;
-	top: 1400px;
+	top: 1450px;
 	bottom: 100px; 
-	left: 730px;
-	right: 50px;
+	left: 820px;
+	right: 100px;
 }
 
 
