@@ -42,7 +42,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["White", "Black", "Asian", "Other"],
-        "range": ["brown", "grey", "darkblue", "darkgreen"]
+        "range": ["#808000", "grey", "darkblue", "#008080"]
       }
     },
     "opacity": {
