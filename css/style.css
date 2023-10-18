@@ -8,72 +8,11 @@
 	/*height: 1000px;
 	width: 800px;*/
 }
-#vis1 {
-	position: absolute;
-	float: left;
-	top: 300px;
-	bottom: 50px;
-	left: 180px;
-	font-family: helvetica;
-	color: black;
-	font-size: 18px;
-	font-style:normal;
-}
-#num2 { position: absolute;
-	float: left;
-	top: 780px;
-	bottom: 100px;
-	left: 890px;
-	right: 100px;
-	font-family: helvetica;
-	color: black;
-	font-size: 18px;
-	font-style: normal;
 
-}
-#num3 {position: absolute;
-	float: left;
-	top: 1330px;
-	bottom: 100px;
-	left: 220px;
-	right: 100px;
-	font-family: helvetica;
-	color: black;
-	font-size: 18px;
-	font-style: normal;}
 
-#num4 {position: absolute;
-		float: left;
-		top: 1990px;
-		bottom: 100px;
-		left: 870px;
-		right: 100px;
-		font-family: helvetica;
-		color: black;
-		font-size: 18px;
-		font-style: normal;}
 
-#num5 {position: absolute;
-	float: left;
-	top: 2800px;
-	bottom: 100px;
-	left: 390px;
-	right: 100px;
-	font-family: helvetica;
-	color: black;
-	font-size: 18px;
-	font-style: normal;}
 
-#num6 {position: absolute;
-		float: left;
-		top: 3560px;
-		bottom: 100px;
-		left: 220px;
-		right: 100px;
-		font-family: helvetica;
-		color: black;
-		font-size: 18px;
-		font-style: normal;}
+
 
 
 
