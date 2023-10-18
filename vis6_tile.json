@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "title":{"text": " Salary by Years of Experience and Race",
+  "title":{"text": " Salary by Years of Experience and Race     (#5)",
   "fontSize": 20, "fontWeight":"bold"},
   "data": {
     "url": "https://raw.githubusercontent.com/Taz0097/exmple/main/salary1.csv"
