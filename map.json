@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Average Salar",
-  "title":{"text": " Salary Based On Country", "fontSize": 20,
+  "title":{"text": " Salary Based On Country  (#1)", "fontSize": 20,
 "fontWeight": "bold"} ,
   "width": 600,
   "height": 500,  "background": "transparent",
